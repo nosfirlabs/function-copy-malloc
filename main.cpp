@@ -35,6 +35,8 @@ int main() {
   // Alloziere Speicher für die Duplikatfunktion mithilfe von malloc
   void* duplicate = malloc(size);
   
+   // Kopiere den Maschinencode der originalen Funktion in die Duplikatfunktion
+  memcpy(duplicate, original_code, size);
   
   
 }
