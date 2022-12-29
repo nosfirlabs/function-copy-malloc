@@ -24,3 +24,6 @@ int main() {
   }
 
 }
+
+// Ermittle die Größe der originalen Funktion
+size_t size = (char*)original_function - (char*)main;
