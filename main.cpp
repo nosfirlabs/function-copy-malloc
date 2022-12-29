@@ -38,5 +38,8 @@ int main() {
    // Kopiere den Maschinencode der originalen Funktion in die Duplikatfunktion
   memcpy(duplicate, original_code, size);
   
+  // Caste die Duplikatfunktion zu einem Funktionszeiger und rufe sie auf
+  int (*duplicate_function)(int, int) = (int (*)(int, int))duplicate;
+  printf("Result: %d\n", duplicate_function(5, 7));
   
 }
