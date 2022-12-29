@@ -42,4 +42,9 @@ int main() {
   int (*duplicate_function)(int, int) = (int (*)(int, int))duplicate;
   printf("Result: %d\n", duplicate_function(5, 7));
   
+  // Unmappe den originalen Code und gib den allozierten Speicher frei
+  munmap(original_code, size);
+  free(duplicate);
+
+  return 0;
 }
