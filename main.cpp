@@ -32,4 +32,9 @@ int main() {
     return 1;
   }
   
+  // Alloziere Speicher für die Duplikatfunktion mithilfe von malloc
+  void* duplicate = malloc(size);
+  
+  
+  
 }
