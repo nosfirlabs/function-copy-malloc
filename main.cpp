@@ -13,3 +13,14 @@ int original_function(int x, int y) {
   }
   return result;
 }
+
+
+int main() {
+  // Öffne einen Dateideskriptor für die ausführbare Datei
+  int fd = open("/proc/self/exe", O_RDONLY);
+  if (fd < 0) {
+    perror("Fehler beim Öffnen der ausführbaren Datei");
+    return 1;
+  }
+
+}
